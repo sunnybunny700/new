@@ -1,0 +1,169 @@
+.navbar {
+    width: 101%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.logo {
+    height: 30px; /* Adjust height as needed */
+    width: auto;  /* Maintains aspect ratio */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.navbar-search input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.navbar-search button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0;
+    font-size: 11px;
+}
+
+
+
+
+/* Basic reset */
+* {
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container to hold sidebar and main content */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar (left side) */
+.sidebar {
+  width: 330px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+#step-navigation {
+  list-style-type: none;
+  padding: 0;
+}
+
+#step-navigation li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#step-navigation li.active {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* Main content area (wizard and image) */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Styling for the question container (middle part) */
+.step-question-container {
+  flex: 0 0 50%;
+  padding: 25px;
+  text-align: center;
+}
+
+/* Styling for the image container (right side) */
+.step-image-container {
+  flex: 0 0 40%;
+  max-width: 500px;
+}
+
+.step-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-container .image-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 30px;
+}
+
+/* Button Styling */
+button {
+  width: 50%;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px 0; /* Adds vertical spacing between buttons */
+  display: block; /* Added to make buttons stack vertically */
+}
+
+.button-container {
+  text-align: center; /* Centers the buttons horizontally */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+

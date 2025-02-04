@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/diagnostic.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaterialDoctor</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-container">
+        <img src="{% static 'images/your-logo.svg' %}" alt="Logo" class="logo">
+    </div>
+    <div class="navbar-menu">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'bank' %}">MaterialBank</a>
+        <a href="{% url 'diagnostic' %}">MaterialDoctor</a>
+    </div>
+    <div class="navbar-search">
+        <input type="text" placeholder="Search for materials">
+        <button>Search</button>
+    </div>
+  </nav>
+
+
+    <div class="container">
+        <!-- Sidebar on the left -->
+        <div class="sidebar">
+            <h3>Current Step</h3>
+            <ul id="step-navigation">
+                <!-- Current step links will be dynamically added here -->
+            </ul>
+        </div>
+
+        <!-- Main content (wizard and image) -->
+        <div class="main-content">
+            <!-- Wizard content will be dynamically added here -->
+            <div id="step-container"></div>
+        </div>
+        <div class="button-container"></div>
+    </div>
+    <script>
+      const imageUrls = {
+          "Step 1: Choose Object": "{% static 'images/window1.jpg' %}",
+          "Step 2: Identify the Problem": "{% static 'images/window2.jpg' %}",
+          "Step 3: Locate the Affected Part": "{% static 'images/door1.jpg' %}",
+          "Step 4: Diagnose the Issue": "{% static 'images/door2.jpg' %}",
+          "Step 5: Suggested Fixes & Next Steps": "{% static 'images/bitte.jpg' %}",
+      }
+  </script>
+  <script src="{% static 'javascript/diagnostic.js' %}" defer></script>
+</body>
+</html>

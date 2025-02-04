@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/bank.css' %}">
+        <title>
+            MaterialBank
+        </title>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="{% static 'images/your-logo.svg' %}" alt="Logo" class="logo">
+            </div>
+            <div class="navbar-menu">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'bank' %}">MaterialBank</a>
+                <a href="{% url 'diagnostic' %}">MaterialDoctor</a>
+            </div>
+            <div class="navbar-search">
+                <input type="text" placeholder="Search for materials">
+                <button>Search</button>
+            </div>
+        </nav>
+
+        <main>
+
+            <div class="container">
+                <div class="filter-container">
+                    <select class="filter-select">
+                        <option value="all">All</option>
+                        <option value="wood">Woods</option>
+                        <option value="metal">Metals</option>
+                        <option value="textile">Textiles</option>
+                        <option value="glass">Glass</option>
+                        <option value="plastic">Plastics</option>
+                    </select>
+                </div>
+            
+                <div class="material-grid">
+                    <div class="material wood">
+                        <a href="{% url 'prop' %}">
+                            <img src="{% static 'images/walnut-wood.jpg' %}" alt="Walnut Wood">
+                        </a>
+                        <p>Walnut Wood</p>
+                    </div>
+                    <div class="material metal">
+                        <img src="{% static 'images/stainless-steel.jpg' %}" alt="Stainless Steel">
+                        <p>Stainless Steel</p>
+                    </div>
+                    <div class="material textile">
+                        <img src="{% static 'images/glassfiber.jpg' %}" alt="Glassfiber">
+                        <p>Glassfiber</p>
+                    </div>
+                    <div class="material textile">
+                        <img src="{% static 'images/cotton-canvas.jpg' %}" alt="Cotton canvas textile">
+                        <p>Cotton Canvas Textile</p>
+                    </div>
+                    <div class="material wood">
+                        <img src="{% static 'images/spruce-wood.jpg' %}" alt="Spruce Wood">
+                        <p>Spruce Wood</p>
+                    </div>
+                    <div class="material metal">
+                        <img src="{% static 'images/aluminum.jpg' %}" alt="Aluminum">
+                        <p>Aluminum</p>
+                    </div>
+                    <div class="material glass">
+                        <img src="{% static 'images/frosted-glass.jpg' %}" alt="Frosted Glass">
+                        <p>Frosted Glass</p>
+                    </div>
+                    <div class="material textile">
+                        <img src="{% static 'images/linen-textile.jpg' %}" alt="Linen textile">
+                        <p>Linen Textile</p>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        <script src="{% static 'javascript/filter.js' %}"></script>
+    </body>
+
+</html>

@@ -1,0 +1,134 @@
+.navbar {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 30px; /* Adjust height as needed */
+    width: auto;  /* Maintains aspect ratio */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.navbar-search input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.navbar-search button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 97%; /* Adjust as needed */
+    height: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+
+.filter {
+    position: absolute;
+    top: 70px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.material-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.material {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    padding-top: 100%; /* Maintain square aspect ratio */
+}
+
+.material img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevent distortion */
+}
+
+.material p {
+    position: absolute;
+    bottom: 0; /* Adjust as needed for spacing */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1); /* Semi-transparent background for text */
+    padding: 11px 0px;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+    z-index: 1; /* Ensure text stays above the image */
+}
+
+.material:hover {
+    transform: translateY(-4px);
+}

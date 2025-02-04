@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/prop.css' %}">
+        <title>
+            MaterialProperties
+        </title>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="{% static 'images/your-logo.svg' %}" alt="Logo" class="logo">
+            </div>
+            <div class="navbar-menu">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'bank' %}">MaterialBank</a>
+                <a href="{% url 'diagnostic' %}">MaterialDoctor</a>
+            </div>
+            <div class="navbar-search">
+                <input type="text" placeholder="Search for materials">
+                <button>Search</button>
+            </div>
+        </nav>
+
+        <div class="material-description">
+            <h2>Walnut Wood</h2>
+        
+            <h3>Description</h3>
+            <ul>
+                <li><strong>Pros</strong></li>
+                <ul>
+                    <li>Known for its rich, dark brown color and elegant grain patterns, making it highly sought after for premium furniture and décor.</li>
+                    <li>Highly durable and resistant to wear, suitable for long-term use in furniture, flooring, and cabinetry.</li>
+                    <li>Easy to carve and shape, allowing for detailed craftsmanship in woodworking projects.</li>
+                    <li>Naturally resistant to decay, making it ideal for indoor and moderately protected outdoor use.</li>
+                    <li>Finishes beautifully with oil, varnish, or stain, highlighting its natural aesthetic.</li>
+                </ul>
+        
+                <li><strong>Cons</strong></li>
+                <ul>
+                    <li>Relatively expensive compared to other hardwoods, which may limit its use for large-scale projects.</li>
+                    <li>Can be prone to scratches and dents due to its medium hardness (not as hard as some exotic woods).</li>
+                    <li>Requires regular maintenance to preserve its polished look and protect it from UV exposure.</li>
+                    <li>Limited natural resistance to prolonged exposure to moisture, making it less ideal for very humid or wet environments without proper treatment.</li>
+                </ul>
+            </ul>
+        
+            <h3>Local Material Alternatives</h3>
+            <ul>
+                <li><strong>Cedro:</strong> Similar in workability and durability, with a natural resistance to decay and termites, though lighter in color.</li>
+                <li><strong>Majagua:</strong> A dense, durable hardwood often used for tools and construction, known for its resistance to wear but harder to carve.</li>
+                <li><strong>Guayacán:</strong> Extremely hard and durable, but significantly heavier and more challenging to work with.</li>
+            </ul>
+        
+            <h3>Links</h3>
+            <ul>
+                <li><a href="https://www.cubawoodsuppliers.com" target="_blank">Revolico</a></li>
+                <li><a href="https://www.example.com/cuban-wood-alternatives" target="_blank">Wood Alternatives in Cuba</a></li>
+            </ul>
+        </div>
+        
+    </body>
+
+</html>

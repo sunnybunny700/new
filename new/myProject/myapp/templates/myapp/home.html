@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <title>
+            MaterialGuide
+        </title>
+    </head>
+
+    <body>
+        
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="{% static 'images/your-logo.svg' %}" alt="Logo" class="logo">
+            </div>
+            <div class="navbar-menu">
+                <a href="#">Home</a>
+                <a href="{% url 'bank' %}">MaterialBank</a>
+                <a href="{% url 'diagnostic' %}">MaterialDoctor</a>
+            </div>
+            <div class="navbar-search">
+                <input type="text" placeholder="Search for materials">
+                <button>Search</button>
+            </div>
+        </nav>
+        <div class="image-container">
+            <img src="{% static 'images/danke3.jpg' %}" alt="Logo">>
+            <div class="banner">
+                <h2></h2>
+                <h3></h3>
+            </div>
+            <div class="button-container">
+                <a href="{% url 'diagnostic' %}">
+                <button>START NOW</button>
+                </a>
+            </div>
+        </div>
+      
+    </body>
+
+</html>
